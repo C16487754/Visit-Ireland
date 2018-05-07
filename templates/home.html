@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% load static %}
+
+
+{% get_current_language as LANGUAGE_CODE %}
+
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">{%trans "County"%}</li>
+{% endblock %}
+
+
+
+
+{% block content %}
+<hr>
+<p style = "text-align: center;">
+{%trans "Explore Ireland! Click on the counties below to find out more!"%}
+</p>
+
+  <table class="table">
+    <thead class="thead-inverse">
+    	<tr>
+		
+    	</tr>
+      <tr>
+        <th>{%trans "Counties" %}</th>
+        <th>{%trans "Number of Attractions"%}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for county in counties %}
+        <tr>
+          <td>
+            <a href="{% url 'county_attractions' county.pk %}">{{ county.name }}</a>
+            <small class="text-muted d-block">{{ county.description }}</small>
+          </td>
+          <td class="align-middle">
+            {{ county.attractions.count }}
+          </td>
+          
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+{% endblock %}

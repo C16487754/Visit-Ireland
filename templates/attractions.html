@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{%load humanize %}
+{% block title %}
+  {{ county.name }} - {{ block.super }}
+{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">{%trans "County"%}</a></li>
+  <li class="breadcrumb-item active">{{ county.name }}</li>
+{% endblock %}
+
+{% block content %}
+
+<p>{{county.paragraph}}.</p>
+
+
+
+
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+        <th>{%trans "Attraction"%}</th>
+        <th>{%trans "Comments" %}</th>
+        <th>{%trans "Views" %}</th>
+        <th>{%trans "Last Update" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for attraction in attractions %}
+      <tr>
+        <td><a href="{% url 'attraction_comments' county.pk attraction.pk %}">{{ attraction.subject }}</a></td>
+        <td>{{ attraction.replies }}</td>
+        <td>{{ attraction.views }}</td>  <!-- here -->
+        <td>{{ attraction.last_updated|naturaltime }}</td>
+      </tr>
+    {% endfor %}
+	
+
+    </tbody>
+  </table>
+{% endblock %}

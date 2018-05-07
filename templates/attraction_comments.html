@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{%load gravatar %}
+
+{% block title %}{{ attraction.subject }}{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">{%trans "County"%}</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'county_attractions' attraction.county.pk %}">{{ attraction.county.name }}</a></li>
+  <li class="breadcrumb-item active">{{ attraction.subject }}</li>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+
+
+<h3 class="centerImage" ><u>{{attraction.title}}</u></h3>
+
+
+
+<section>
+
+<div class="Image1">
+<img style = "width: 400px; height: 250px;" src="{{MEDIA_URL}}{{attraction.subject}}/image1.jpg"  alt="HI!" />
+</div>
+<p>{{attraction.paragraph1}}</p>
+
+
+
+<div class="Image2">
+<img style = "width: 400px; height: 250px;" src="{{MEDIA_URL}}{{attraction.subject}}/image2.jpg" style="text-align:center;" alt="HI!" />
+</div>
+<p>{{attraction.paragraph2}}</p>
+
+
+				
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4>{%trans "Comments Section"%}</h4>
+<hr>
+
+{% for comment in attraction.comments.all %}
+    <div class="card mb-2">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="col-2">
+
+            <img src="{{ comment.created_by|gravatar }}" alt="{{ comment.created_by.username }}" class="w-100 rounded">
+
+            <small>comments: {{ comment.created_by.comments.count }}</small>
+          </div>
+          <div class="col-10">
+            <div class="row mb-3">
+              <div class="col-6">
+                <strong class="text-muted">{{ comment.created_by.username }}</strong>
+              </div>
+              <div class="col-6 text-right">
+                <small class="text-muted">{{ comment.created_at }}</small>
+              </div>
+            </div>
+            {{ comment.message }}
+            {% if comment.created_by == user %}
+              <div class="mt-3">
+                <a href="#" class="btn btn-primary btn-sm" role="button">{%trans "Edit"%}</a>
+              </div>
+            {% endif %}
+          </div> 
+        </div>	
+      </div> 
+    </div>
+  {% endfor %}
+  
+  <p class="text-muted d-block">{%trans "post a comment about"%} {{attraction.subject}} :<p>
+  <div class="mb-4">
+    <a href="{% url 'reply_attraction' attraction.county.pk attraction.pk %}" class="btn btn-primary" role="button">{%trans "Comment"%}</a>
+  </div>
+
+
+{% endblock %}

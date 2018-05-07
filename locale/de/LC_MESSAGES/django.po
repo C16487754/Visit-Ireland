@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-07 08:57+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\countiesproj\settings.py:120 .\templates\base.html:75
+msgid "English"
+msgstr "Englisch"
+
+#: .\countiesproj\settings.py:121 .\templates\base.html:76
+msgid "German"
+msgstr "Deutsche"
+
+#: .\countiesproj\settings.py:122
+msgid "Portuguese"
+msgstr "Portugiesisch"
+
+#: .\templates\attraction_comments.html:9 .\templates\attractions.html:9
+#: .\templates\home.html:11
+msgid "County"
+msgstr "Bezirk"
+
+#: .\templates\attraction_comments.html:56
+msgid "Comments Section"
+msgstr "Kommentarabschnitt"
+
+#: .\templates\attraction_comments.html:81
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: .\templates\attraction_comments.html:90
+msgid "post a comment about"
+msgstr "Hinterlasse einen Kommentar über"
+
+#: .\templates\attraction_comments.html:92
+msgid "Comment"
+msgstr "Kommentar"
+
+#: .\templates\attractions.html:23
+msgid "Attraction"
+msgstr "Attraktion"
+
+#: .\templates\attractions.html:24
+msgid "Comments"
+msgstr "Bemerkungen"
+
+#: .\templates\attractions.html:25
+msgid "Views"
+msgstr "Ansichten"
+
+#: .\templates\attractions.html:26
+msgid "Last Update"
+msgstr "letztes Update"
+
+#: .\templates\base.html:59 .\templates\login.html:13
+#: .\templates\login.html:17 .\templates\signup.html:26
+msgid "Log in"
+msgstr "Einloggen"
+
+#: .\templates\base.html:60 .\templates\login.html:21
+#: .\templates\signup.html:18
+msgid "Sign up"
+msgstr "Melde dich an"
+
+#: .\templates\base.html:77
+msgid "Portugese"
+msgstr "Portugiesisch"
+
+#: .\templates\home.html:20
+msgid "Explore Ireland! Click on the counties below to find out more!"
+msgstr "Erkunde Irland! Klicken Sie unten auf die Grafschaften, um mehr zu erfahren!"
+
+#: .\templates\home.html:30
+msgid "Counties"
+msgstr "Grafschaften"
+
+#: .\templates\home.html:31
+msgid "Number of Attractions"
+msgstr "Anzahl der Attraktionen"
+
+#: .\templates\login.html:21
+msgid "New to"
+msgstr "neu für"
+
+#: .\templates\login.html:26
+msgid "Forgot your password?"
+msgstr "Passwort vergessen?"
+
+#: .\templates\reply_attraction.html:9
+msgid "counties"
+msgstr "Grafschaften"
+
+#: .\templates\reply_attraction.html:12
+msgid "Post a comment"
+msgstr "Einen Kommentar posten"
+
+#: .\templates\reply_attraction.html:20
+msgid "Post comment"
+msgstr "Einen Kommentar posten"
+
+#: .\templates\signup.html:12
+msgid "Visit Ireland"
+msgstr "Visit Ireland"
+
+#: .\templates\signup.html:22
+msgid "Create an account"
+msgstr "ein Konto erstellen"
+
+#: .\templates\signup.html:26
+msgid "Already have an account?"
+msgstr "Hast du schon ein Konto?"
+
+#~ msgid "Posts"
+#~ msgstr "posten"
+
+#~ msgid "New to Django Boards?"
+#~ msgstr "Neu bei Djangoboards"

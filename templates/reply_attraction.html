@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+
+{% block title %}Post a reply{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">{%trans "counties"%}</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'county_attractions' attraction.county.pk %}">{{ attraction.county.name }}</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'attraction_comments' attraction.county.pk attraction.pk %}">{{ attraction.subject }}</a></li>
+  <li class="breadcrumb-item active">{%trans "Post a comment"%}</li>
+{% endblock %}
+
+{% block content %}
+
+  <form method="post" class="mb-4">
+    {% csrf_token %}
+    {% include 'includes/form.html' %}
+    <button type="submit" class="btn btn-success">{%trans "Post comment"%}</button>
+  </form>
+
+  {% for comment in attraction.comments.all %}
+    
+  {% endfor %}
+
+{% endblock %}

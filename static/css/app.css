@@ -1,0 +1,55 @@
+.navbar-brand {
+font-family: "Times New Roman", Times, serif;
+
+}
+
+.formh{
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	  color: rgba(0,0,0,.9);
+	
+}
+
+.formh a:hover,
+.formh a:active {
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+.Image1
+{
+
+	float: right;
+	display:block;
+	padding: 10px;
+}
+
+.Image2
+{
+
+	float: left;
+	display:block;
+	padding: 10px;
+}
+
+ol{
+	list-style: none;
+  list-style-type: none;
+  color:blue;
+  
+}
+
+
+ol li {
+	display: inline;
+}
+
+.bc {
+	background-color: lightblue;
+	padding-left: 80px;
+}
